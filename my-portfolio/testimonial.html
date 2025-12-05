@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">💻</span>
+                    <span class="logo-text">Dev Portfolio</span>
+                </a>
+            </div>
+            
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#work">Work</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#packages">Packages</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                    <li><a href="testimonial.html#submit-testimonial">Submit Testimonial</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="testimonials-hero">
+        <h1>Client Testimonials</h1>
+        <p>What my clients say about working with me</p>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">JD</div>
+                    <div class="testimonial-info">
+                        <h3>John Doe</h3>
+                        <p class="testimonial-role">CEO, Tech Startup</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "Working with this developer was a game-changer for our business. The website they built is not only beautiful but also highly functional. Their attention to detail and dedication to excellence is remarkable."
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">SM</div>
+                    <div class="testimonial-info">
+                        <h3>Sarah Miller</h3>
+                        <p class="testimonial-role">Marketing Director</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "I was impressed by their professionalism and quick turnaround time. They understood my vision perfectly and delivered exactly what I needed. Highly recommended!"
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MC</div>
+                    <div class="testimonial-info">
+                        <h3>Michael Chen</h3>
+                        <p class="testimonial-role">Founder, E-commerce</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "The website has increased our sales by 40% since launch. The developer's expertise in responsive design and user experience really shows. Worth every penny!"
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">EB</div>
+                    <div class="testimonial-info">
+                        <h3>Emily Brown</h3>
+                        <p class="testimonial-role">Project Manager, Agency</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "Communication was excellent throughout the project. They asked the right questions, provided valuable suggestions, and delivered a stunning final product on time."
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RP</div>
+                    <div class="testimonial-info">
+                        <h3>Robert Phillips</h3>
+                        <p class="testimonial-role">Business Owner</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "If you're looking for someone who cares about quality and customer satisfaction, this is your person. They go above and beyond to ensure you're happy with the result."
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">LP</div>
+                    <div class="testimonial-info">
+                        <h3>Lisa Patterson</h3>
+                        <p class="testimonial-role">Freelance Designer</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "Great collaboration! They were easy to work with and brought my designs to life perfectly. The technical implementation was flawless and performed beautifully."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Testimonial section -->
+    <section id="submit-testimonial" class="submit-testimonial">
+        <h2>Share Your Experience</h2>
+        <p>Have you worked with me? I'd love to hear about your experience!</p>
+        <form id="testimonial-form" novalidate>
+            <label>
+                Your Name
+                <input type="text" name="testimonial-name" id="testimonial-name" required placeholder="Your full name" />
+            </label>
+            <label>
+                Your Role / Company
+                <input type="text" name="testimonial-role" id="testimonial-role" required placeholder="e.g., CEO at Tech Startup" />
+            </label>
+            <label>
+                Email
+                <input type="email" name="testimonial-email" id="testimonial-email" required placeholder="your@email.com" />
+            </label>
+            <label>
+                Your Testimonial
+                <textarea name="testimonial-text" id="testimonial-text" rows="5" required placeholder="Share your experience working with me..."></textarea>
+            </label>
+            <label class="rating-label">
+                Rating
+                <div class="star-rating">
+                    <input type="radio" name="rating" value="5" id="star5" required />
+                    <label for="star5">⭐</label>
+                    <input type="radio" name="rating" value="4" id="star4" />
+                    <label for="star4">⭐</label>
+                    <input type="radio" name="rating" value="3" id="star3" />
+                    <label for="star3">⭐</label>
+                    <input type="radio" name="rating" value="2" id="star2" />
+                    <label for="star2">⭐</label>
+                    <input type="radio" name="rating" value="1" id="star1" />
+                    <label for="star1">⭐</label>
+                </div>
+            </label>
+            <button type="submit">Submit Testimonial</button>
+            <p id="testimonial-msg" class="form-message" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Chat widget -->
+    <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">💬</button>
+    <div id="chat-widget" class="chat-widget" aria-hidden="true">
+        <div class="chat-header">
+            <span>Chat with me</span>
+            <button id="chat-close" class="chat-close" aria-label="Close chat">✕</button>
+        </div>
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+        <form id="chat-form" class="chat-form">
+            <input id="chat-input" type="text" placeholder="Say hi..." autocomplete="off" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Portfolio. Built with care.</p>
+            <div class="footer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Follow on Instagram">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.015-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="social-link whatsapp" aria-label="Contact on WhatsApp">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-2.87 1.693-4.773 5.41-4.773 9.282 0 1.312.243 2.566.681 3.737l-1.06 3.873 3.976-1.04a9.771 9.771 0 004.6 1.176h.007c5.487 0 9.980-4.493 9.98-9.981 0-2.665-1.035-5.169-2.918-7.055-1.883-1.886-4.391-2.927-7.055-2.927"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

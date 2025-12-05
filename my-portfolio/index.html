@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">💻</span>
+                    <span class="logo-text">Dev Portfolio</span>
+                </a>
+            </div>
+            
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Web Developer</h1>
+        <p>I design and build clean, modern websites.</p>
+        <input type="text" placeholder="Search..." />
+    </section>
+
+    <section id="work" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="tabs">
+            <button class="tab active" data-category="all">All</button>
+            <button class="tab" data-category="web">Web</button>
+            <button class="tab" data-category="app">App</button>
+            <button class="tab" data-category="design">Design</button>
+            <button class="tab" data-category="development">Development</button>
+        </div>
+        <div class="project-list">
+            <div class="project" data-category="web">
+                <h3>E-commerce Website</h3>
+                <p>Where style meets convenience — discover, click, enjoy.</p>
+            </div>
+            <div class="project" data-category="app">
+                <h3>Web App</h3>
+                <p>Not just a website — a full-blown experience.</p>
+            </div>
+            <div class="project" data-category="design">
+                <h3>UI/UX Design</h3>
+                <p>Turning complexity into clarity — one interface at a time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="./Image/Man Shadow1.jpeg" alt="Profile Image" />
+        <p>Passionate web developer with a knack for building sleek, 
+            responsive interfaces using React and modern JavaScript. 
+            I turn ideas into interactive experiences and love crafting clean, 
+            maintainable code. 
+            Always learning, always building.
+        </p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="service">
+            <h3>Web Design</h3>
+            <p>Creating responsive and visually appealing websites.</p>
+            <div class="service-pricing">
+                <span class="price-usd">$500</span>
+                <span class="price-naira">₦750,000</span>
+            </div>
+        </div>
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>Building responsive and efficient websites and web applications.</p>
+            <div class="service-pricing">
+                <span class="price-usd">$1,200</span>
+                <span class="price-naira">₦1,800,000</span>
+            </div>
+        </div>
+        <div class="service">
+            <h3>UI/UX Design</h3>
+            <p>Designing user interfaces and experiences that are intuitive and engaging.</p>
+            <div class="service-pricing">
+                <span class="price-usd">$800</span>
+                <span class="price-naira">₦1,200,000</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Technologies section -->
+    <section id="tools" class="tools">
+        <h2>Tools & Technologies</h2>
+        <p>I work with modern tools and technologies to build amazing websites.</p>
+        <div class="tools-grid">
+            <div class="tool-item">
+                <span class="tool-icon">💻</span>
+                <h3>VS Code</h3>
+                <p>Code editor for development</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">🐙</span>
+                <h3>GitHub</h3>
+                <p>Version control & collaboration</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">🎨</span>
+                <h3>Figma</h3>
+                <p>UI/UX design tool</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">⚛️</span>
+                <h3>React</h3>
+                <p>JavaScript library</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">📘</span>
+                <h3>HTML/CSS</h3>
+                <p>Web markup & styling</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">✨</span>
+                <h3>JavaScript</h3>
+                <p>Interactive functionality</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">🔧</span>
+                <h3>Node.js</h3>
+                <p>Backend development</p>
+            </div>
+            <div class="tool-item">
+                <span class="tool-icon">📦</span>
+                <h3>npm</h3>
+                <p>Package management</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages / Pricing -->
+    <section id="packages" class="packages">
+        <h2>Packages & Pricing</h2>
+        <p>Choose a package that fits your needs — prices shown in USD and NGN (Naira).</p>
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3>Basic</h3>
+                <div class="package-price"><span class="price-usd">$300</span> <span class="price-naira">₦450,000</span></div>
+                <ul>
+                    <li>Up to 3 pages</li>
+                    <li>Responsive design</li>
+                    <li>Basic SEO</li>
+                    <li>1 month support</li>
+                    <li>1 revision</li>
+                </ul>
+                <button class="btn-get-started">Get Started</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Standard</h3>
+                <div class="package-price"><span class="price-usd">$700</span> <span class="price-naira">₦1,050,000</span></div>
+                <ul>
+                    <li>Up to 7 pages</li>
+                    <li>Responsive + CMS setup</li>
+                    <li>SEO basics & performance
+                    </li>
+                    <li>3 months support</li>
+                    <li>3 revisions</li>
+                </ul>
+                <button class="btn-get-started">Get Started</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Silver</h3>
+                <div class="package-price"><span class="price-usd">$1,000</span> <span class="price-naira">₦1,500,000</span></div>
+                <ul>
+                    <li>Up to 10 pages</li>
+                    <li>CMS + integrations</li>
+                    <li>Performance tuning</li>
+                    <li>4 months support</li>
+                    <li>5 revisions</li>
+                </ul>
+                <button class="btn-get-started">Get Started</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Premium</h3>
+                <div class="package-price"><span class="price-usd">$1,500</span> <span class="price-naira">₦2,250,000</span></div>
+                <ul>
+                    <li>Custom design & development</li>
+                    <li>E-commerce or web app support</li>
+                    <li>Advanced SEO & analytics</li>
+                    <li>6 months support</li>
+                    <li>Priority updates</li>
+                </ul>
+                <button class="btn-get-started">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project modal (single, reused) -->
+    <div id="project-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-body"></p>
+        </div>
+    </div>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Chat widget (added) -->
+    <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">💬</button>
+    <div id="chat-widget" class="chat-widget" aria-hidden="true">
+        <div class="chat-header">
+            <span>Assistant</span>
+            <button id="chat-close" class="chat-close" aria-label="Close chat">✕</button>
+        </div>
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+        <form id="chat-form" class="chat-form">
+            <input id="chat-input" type="text" placeholder="Say hi..." autocomplete="off" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Portfolio. Built with care.</p>
+            <div class="footer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Follow on Instagram">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.015-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="social-link whatsapp" aria-label="Contact on WhatsApp">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-2.87 1.693-4.773 5.41-4.773 9.282 0 1.312.243 2.566.681 3.737l-1.06 3.873 3.976-1.04a9.771 9.771 0 004.6 1.176h.007c5.487 0 9.98-4.493 9.98-9.981 0-2.665-1.035-5.169-2.918-7.055-1.883-1.886-4.391-2.927-7.055-2.927"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
