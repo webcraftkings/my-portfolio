@@ -6,6 +6,17 @@ body {
   color: #fff;
 }
 
+/* Make sizing predictable and images responsive */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Professional Header */
 .site-header {
   background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
@@ -138,6 +149,16 @@ body {
   padding: 60px 20px;
 }
 
+.hero h1 {
+  font-size: clamp(1.6rem, 6vw, 3rem);
+  margin: 0 0 8px 0;
+}
+
+.hero p {
+  font-size: clamp(1rem, 3.2vw, 1.15rem);
+  margin: 0 0 12px 0;
+}
+
 .hero input {
   margin-top: 20px;
   padding: 10px;
@@ -185,7 +206,8 @@ body {
 }
 
 .about img {
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -558,21 +580,24 @@ body.light .tools { background-color: #fafafa; }
     display: none;
   }
 
+  /* place mobile nav below the header (absolute so it follows header height)
+     avoids overlay issues when header height changes */
   .main-nav {
-    position: fixed;
+    position: absolute;
     left: 0;
-    top: 60px;
+    top: 100%;
     right: 0;
     background: #1a1a1a;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.28s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
   }
 
   .main-nav.open {
-    max-height: 300px;
+    max-height: 70vh;
     overflow-y: auto;
   }
 
