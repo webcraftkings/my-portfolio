@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingsley William | Web Developer Portfolio</title>
+  <link rel="icon" href="Images/Man_Shadow 1.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Website Audit & Fixing | Kingsley William</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #e63946;
+    --red-dark: #b52a35;
+    --red-glow: rgba(230, 57, 70, 0.18);
+    --blue: #1d3557;
+    --blue-mid: #2563a8;
+    --blue-light: #457b9d;
+    --black: #080c10;
+    --dark: #0d1117;
+    --dark-2: #141b24;
+    --dark-3: #1a2332;
+    --white: #f1f5f9;
+    --muted: #8b98a9;
+    --border: rgba(255,255,255,0.07);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(8,12,16,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.05em;
+    color: var(--muted); text-decoration: none; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--red); color: #fff;
+    padding: 8px 20px; border-radius: 4px;
+    font-size: 13px; font-weight: 600; text-decoration: none;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--red-dark); transform: translateY(-1px); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: 0.3s; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 6rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(29,53,87,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(230,57,70,0.1) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.04;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; width: 100%; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--red);
+    margin-bottom: 1.5rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 32px; height: 2px; background: var(--red);
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 9vw, 110px);
+    line-height: 0.92;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+  .hero h1 .accent { color: var(--red); }
+  .hero h1 .outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+    color: transparent;
+  }
+  .hero-sub {
+    font-size: 17px; color: var(--muted);
+    max-width: 540px; margin-bottom: 2.5rem; line-height: 1.7;
+  }
+  .hero-sub strong { color: var(--white); }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--red); color: #fff;
+    padding: 14px 32px; border-radius: 4px;
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 14px 32px; border-radius: 4px;
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: border-color 0.2s, transform 0.15s;
+    cursor: pointer;
+  }
+  .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 4rem; flex-wrap: wrap;
+  }
+  .stat { border-left: 2px solid var(--red); padding-left: 1rem; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px; color: var(--white); line-height: 1;
+  }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--red);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1; letter-spacing: 1.5px;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .section-title-center { text-align: center; margin-left: auto; margin-right: auto; }
+  .text-center { text-align: center; }
+  .section-sub.text-center { margin-left: auto; margin-right: auto; }
+  .section-sub { font-size: 16px; color: var(--muted); max-width: 540px; line-height: 1.7; }
+
+  /* ─── AUDIT CATEGORIES ─── */
+  .audit-section { background: var(--dark); }
+  .audit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    margin-top: 3rem;
+  }
+  .audit-item {
+    background: var(--dark-2); padding: 2rem;
+    transition: background 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .audit-item::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: var(--red);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .audit-item:hover { background: var(--dark-3); }
+  .audit-item:hover::before { transform: scaleX(1); }
+  .audit-icon {
+    width: 44px; height: 44px; border-radius: 8px;
+    background: var(--red-glow); border: 1px solid rgba(230,57,70,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 1rem;
+  }
+  .audit-item h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--white); margin-bottom: 0.5rem;
+  }
+  .audit-item p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+  /* ─── TIERS ─── */
+  .tiers-section { background: var(--black); }
+  .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .tier-card {
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 2rem;
+    position: relative; transition: transform 0.2s, border-color 0.2s;
+  }
+  .tier-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.15); }
+  .tier-card.featured {
+    border-color: var(--red);
+    background: linear-gradient(135deg, var(--dark-3) 0%, rgba(29,53,87,0.3) 100%);
+  }
+  .featured-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--red); color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 16px; border-radius: 20px;
+  }
+  .tier-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
+  }
+  .tier-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px; letter-spacing: 1px; color: var(--white); margin-bottom: 0.25rem;
+  }
+  .tier-price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px; font-weight: 700; color: var(--white);
+    margin-bottom: 1.5rem; line-height: 1;
+  }
+  .tier-price sup { font-size: 20px; vertical-align: top; margin-top: 8px; color: var(--red); }
+  .tier-price span { font-size: 14px; font-weight: 400; color: var(--muted); }
+  .tier-divider { border: none; border-top: 1px solid var(--border); margin: 1.25rem 0; }
+  .tier-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+  .tier-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--muted);
+  }
+  .tier-features li .check { color: var(--red); font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+  .tier-btn {
+    display: block; width: 100%; text-align: center;
+    padding: 13px; border-radius: 4px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: transform 0.15s, background 0.2s;
+  }
+  .tier-btn-outline {
+    background: transparent; color: var(--white);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .tier-btn-outline:hover { border-color: var(--white); transform: translateY(-1px); }
+  .tier-btn-solid { background: var(--red); color: #fff; }
+  .tier-btn-solid:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+  /* ─── PROCESS ─── */
+  .process-section { background: var(--dark); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0; margin-top: 3rem; position: relative;
+  }
+  .process-step {
+    padding: 2rem; position: relative;
+    border: 1px solid var(--border);
+    background: var(--dark-2);
+    border-radius: 0;
+    transition: background 0.2s;
+  }
+  .process-step:hover { background: var(--dark-3); }
+  .process-step + .process-step { border-left: none; }
+  .process-step:first-child { border-radius: 8px 0 0 8px; }
+  .process-step:last-child { border-radius: 0 8px 8px 0; }
+  .step-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px; line-height: 1;
+    color: rgba(230,57,70,0.12);
+    margin-bottom: 0.5rem;
+  }
+  .step-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--white); margin-bottom: 0.5rem;
+  }
+  .step-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .step-connector {
+    position: absolute; right: -1px; top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--red);
+    z-index: 2;
+    display: none;
+  }
+
+  /* ─── DELIVERABLES ─── */
+  .deliverables-section { background: var(--black); }
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .deliverable {
+    display: flex; gap: 1.25rem; align-items: flex-start;
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .deliverable:hover { border-color: var(--red); }
+  .deliv-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    border-radius: 6px; background: var(--red-glow);
+    border: 1px solid rgba(230,57,70,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .deliv-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--white); margin-bottom: 4px;
+  }
+  .deliv-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ─── CTA SECTION ─── */
+  .cta-section {
+    background: var(--blue);
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(230,57,70,0.15) 0%, transparent 60%);
+  }
+  .cta-inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .cta-text .section-title { margin-bottom: 0.5rem; }
+  .cta-text p { font-size: 16px; color: rgba(255,255,255,0.7); }
+  .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* ─── COMPARISON BAR ─── */
+  .metrics-section { background: var(--dark); }
+  .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .metric-card {
+    background: var(--dark-2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.5rem;
+  }
+  .metric-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;
+    display: flex; justify-content: space-between;
+  }
+  .metric-label span { color: var(--white); }
+  .bar-wrap { height: 8px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 1.2s cubic-bezier(0.16,1,0.3,1); width: 0; }
+  .bar-red { background: var(--red); }
+  .bar-blue { background: var(--blue-light); }
+  .bar-green { background: #2ecc71; }
+  .metric-compare { display: flex; justify-content: space-between; font-size: 12px; }
+  .metric-before { color: var(--muted); }
+  .metric-after { color: var(--white); font-weight: 600; }
+
+  /* ─── FAQ ─── */
+  .faq-section { background: var(--black); }
+  .faq-list { max-width: 720px; margin-top: 3rem; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .faq-question {
+    width: 100%; background: none; border: none;
+    color: var(--white); text-align: left;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px; font-weight: 600;
+    padding: 1.25rem 0;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; gap: 1rem;
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--red); }
+  .faq-icon {
+    width: 24px; height: 24px; flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; line-height: 1; color: var(--muted);
+    transition: transform 0.3s, border-color 0.2s;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--red); color: var(--red); }
+  .faq-answer {
+    font-size: 15px; color: var(--muted); line-height: 1.75;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s;
+    padding-bottom: 0;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.25rem; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark); padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-size: 13px; color: var(--muted);
+  }
+  footer a { color: var(--red); text-decoration: none; }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--dark); padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      gap: 1rem;
+    }
+    .process-step + .process-step { border-left: 1px solid var(--border); border-top: none; }
+    .process-step:first-child { border-radius: 8px 8px 0 0; }
+    .process-step:last-child { border-radius: 0 0 8px 8px; }
+    .process-steps { grid-template-columns: 1fr; }
+    .cta-inner { flex-direction: column; text-align: center; }
+    .cta-btns { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">King<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#audits">Services</a></li>
+    <li><a href="#tiers">Pricing</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#tiers" class="nav-cta">Get Started</a>
+  <div class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Website Audit & Fixing</div>
+    <h1>
+      DIAGNOSE.<br>
+      <span class="accent">FIX.</span><br>
+      <span class="outline">DOMINATE.</span>
+    </h1>
+    <p class="hero-sub">
+      Your website is losing you money right now.
+      <strong>I find every hidden problem</strong> — slow speeds, broken SEO, security holes, bad UX — and I fix them. All of it.
+    </p>
+    <div class="hero-btns">
+      <a href="#tiers" class="btn-primary">See Pricing</a>
+      <a href="#audits" class="btn-outline">What I Fix</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Audit categories</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">48h</div>
+        <div class="stat-label">Avg turnaround</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Documented fixes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT CATEGORIES -->
+<section class="audit-section" id="audits">
+  <div class="container">
+    <span class="section-tag reveal">What I Audit & Fix</span>
+    <h2 class="section-title reveal">Six pillars.<br>Zero compromise.</h2>
+    <p class="section-sub reveal text-center">Every site gets a full sweep across all six categories. Nothing gets skipped.</p>
+    <div class="audit-grid reveal">
+      <div class="audit-item">
+        <div class="audit-icon">🔍</div>
+        <h3>SEO Audit</h3>
+        <p>Meta tags, heading structure, keyword gaps, broken links, sitemap issues, and Google indexing problems that are keeping you invisible.</p>
+      </div>
+      <div class="audit-item">
+        <div class="audit-icon">⚡</div>
+        <h3>Performance</h3>
+        <p>PageSpeed score, Core Web Vitals, image optimisation, caching, unused scripts — every second of load time costs you customers.</p>
+      </div>
+      <div class="audit-item">
+        <div class="audit-icon">🔒</div>
+        <h3>Security Review</h3>
+        <p>HTTPS configuration, exposed files, outdated plugins, missing security headers, and vulnerabilities that put your business at risk.</p>
+      </div>
+      <div class="audit-item">
+        <div class="audit-icon">🛠</div>
+        <h3>Code Quality</h3>
+        <p>Broken functionality, console errors, dead code, dependency issues, and structural problems that silently degrade your site over time.</p>
+      </div>
+      <div class="audit-item">
+        <div class="audit-icon">♿</div>
+        <h3>Accessibility</h3>
+        <p>WCAG 2.1 AA compliance — colour contrast, missing alt text, keyboard navigation, screen reader support. Legal risk + missed audience.</p>
+      </div>
+      <div class="audit-item">
+        <div class="audit-icon">🎨</div>
+        <h3>UI / UX Review</h3>
+        <p>Mobile responsiveness, CTA placement, navigation clarity, visual hierarchy, and conversion bottlenecks turning visitors into exits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS METRICS -->
+<section class="metrics-section" id="results">
+  <div class="container">
+    <span class="section-tag reveal">Typical Results</span>
+    <h2 class="section-title reveal">Before vs After</h2>
+    <p class="section-sub reveal text-center">Real numbers from audits on small business sites. Your mileage may vary — but this is what fixing things actually looks like.</p>
+    <div class="metrics-grid reveal" id="metricsGrid">
+      <div class="metric-card">
+        <div class="metric-label">PageSpeed Score <span id="ps-after">—</span></div>
+        <div class="bar-wrap"><div class="bar-fill bar-red" id="ps-bar" data-width="89"></div></div>
+        <div class="metric-compare"><span class="metric-before">Before: 38</span><span class="metric-after">After: 89</span></div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">SEO Score <span id="seo-after">—</span></div>
+        <div class="bar-wrap"><div class="bar-fill bar-blue" id="seo-bar" data-width="92"></div></div>
+        <div class="metric-compare"><span class="metric-before">Before: 44</span><span class="metric-after">After: 92</span></div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Security Grade <span id="sec-after">—</span></div>
+        <div class="bar-wrap"><div class="bar-fill bar-green" id="sec-bar" data-width="96"></div></div>
+        <div class="metric-compare"><span class="metric-before">Before: D</span><span class="metric-after">After: A+</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers-section" id="tiers">
+  <div class="container">
+    <span class="section-tag reveal">Pricing</span>
+    <h2 class="section-title reveal">Pick your tier.</h2>
+    <p class="section-sub reveal text-center">Transparent pricing. No hidden fees. No jargon. Just results.</p>
+    <div class="tiers-grid reveal">
+
+      <div class="tier-card">
+        <div class="tier-label">Starter</div>
+        <div class="tier-name">Audit Report</div>
+        <div class="tier-price"><sup>$</sup>150 <span>– $250</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li><span class="check">✦</span>Full site review (up to 10 pages)</li>
+          <li><span class="check">✦</span>SEO & performance scoring</li>
+          <li><span class="check">✦</span>Prioritised issues report (PDF)</li>
+          <li><span class="check">✦</span>30-min debrief call</li>
+          <li><span class="check">✦</span>No fixes included</li>
+        </ul>
+        <a href="https://wa.link/nlndc7" class="tier-btn tier-btn-outline">Get the report</a>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="tier-label">Core</div>
+        <div class="tier-name">Audit + Fixes</div>
+        <div class="tier-price"><sup>$</sup>400 <span>– $900</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li><span class="check">✦</span>Everything in Starter</li>
+          <li><span class="check">✦</span>On-page SEO fixes applied</li>
+          <li><span class="check">✦</span>Speed & performance optimisation</li>
+          <li><span class="check">✦</span>Security hardening</li>
+          <li><span class="check">✦</span>Accessibility improvements</li>
+          <li><span class="check">✦</span>Before/after scorecard</li>
+        </ul>
+        <a href="https://wa.link/nlndc7" class="tier-btn tier-btn-solid">Start here →</a>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-label">Premium</div>
+        <div class="tier-name">Full Overhaul</div>
+        <div class="tier-price"><sup>$</sup>900 <span>– $1,200</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li><span class="check">✦</span>Everything in Core</li>
+          <li><span class="check">✦</span>Code quality review & refactor</li>
+          <li><span class="check">✦</span>UI/UX redesign recommendations</li>
+          <li><span class="check">✦</span>Sites up to 30 pages</li>
+          <li><span class="check">✦</span>30-day follow-up check</li>
+          <li><span class="check">✦</span>Priority support</li>
+        </ul>
+        <a href="https://wa.link/nlndc7" class="tier-btn tier-btn-outline">Let's talk</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="container">
+    <span class="section-tag reveal">How It Works</span>
+    <h2 class="section-title reveal">Four steps.<br>Zero guesswork.</h2>
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-title">Discovery Call</div>
+        <div class="step-desc">15-minute call to understand your goals, get site access, and scope the work clearly. No surprises later.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-title">Audit Phase</div>
+        <div class="step-desc">Full sweep across all 6 categories using professional tools + manual review. Every issue logged by priority.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-title">Fix & Implement</div>
+        <div class="step-desc">All priority issues resolved directly on your site. Every change is documented as it's made.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div class="step-title">Deliver Report</div>
+        <div class="step-desc">Before/after scorecard with metrics, a summary of every fix, and clear next-step recommendations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="deliverables-section" id="deliverables">
+  <div class="container">
+    <span class="section-tag reveal">What You Get</span>
+    <h2 class="section-title reveal">Every client receives.</h2>
+    <div class="deliverables-grid reveal">
+      <div class="deliverable">
+        <div class="deliv-icon">📊</div>
+        <div>
+          <div class="deliv-title">Before/after scorecard</div>
+          <div class="deliv-desc">PageSpeed, SEO score, and security grade compared side-by-side before and after the work.</div>
+        </div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">📄</div>
+        <div>
+          <div class="deliv-title">Issues report (PDF)</div>
+          <div class="deliv-desc">Every issue found, prioritised by business impact, with a record of all fixes applied.</div>
+        </div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">🔐</div>
+        <div>
+          <div class="deliv-title">Security checklist</div>
+          <div class="deliv-desc">HTTPS, headers, exposed files, plugin vulnerabilities — all reviewed and hardened.</div>
+        </div>
+      </div>
+      <div class="deliverable">
+        <div class="deliv-icon">📱</div>
+        <div>
+          <div class="deliv-title">Mobile & accessibility pass</div>
+          <div class="deliv-desc">Responsive issues and WCAG 2.1 AA violations identified and resolved across all devices.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <span class="section-tag reveal">FAQ</span>
+    <h2 class="section-title reveal">Questions answered.</h2>
+    <div class="faq-list reveal" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-question">How long does an audit and fix take?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Most audits are delivered within 24–48 hours. The Audit + Fixes tier typically takes 3–5 business days depending on the site size. You'll get a timeline before we start.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do you need access to my site?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes — for the fixing tiers, I'll need admin or FTP access to your site. For the Audit Report only, public access to your URL is enough to run the analysis.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What if my site gets worse after fixes?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">I always back up your site before touching anything. If something goes wrong, I restore it and resolve it at no extra charge. You're fully protected.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Which platforms do you work with?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">WordPress, Wix, Squarespace, Webflow, Shopify, and custom HTML/CSS/JS sites. If your site's on the web, I can audit and fix it.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I start with just the report and upgrade later?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Absolutely. Many clients start with the Audit Report ($150–$250) to see what's broken, then decide on fixes. The report fee is credited toward the Core or Premium tier if you upgrade within 14 days.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-text">
+        <span class="section-tag" style="color:rgba(255,255,255,0.6)">Ready?</span>
+        <h2 class="section-title">Let's fix your site.</h2>
+        <p>Book a free 15-minute discovery call — no pressure, no commitment.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="https://wa.link/nlndc7" class="btn-primary">Book a call →</a>
+        <a href="#tiers" class="btn-outline">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // NAV HAMBURGER
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // METRIC BARS ANIMATION
+  const metricObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        metricObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  const metricsGrid = document.getElementById('metricsGrid');
+  if (metricsGrid) metricObserver.observe(metricsGrid);
+
+  // FAQ ACCORDION
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // SMOOTH NAV HIGHLIGHT
+  const sections = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) current = section.id;
+    });
+    navAnchors.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? '#e63946' : '';
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+  <!-- CASE STUDIES -->
+  <section id="case-studies" class="case-studies-section" data-aos="fade-up">
+    <div class="case-studies-header">
+      <h2>Case Studies</h2>
+      <p class="section-sub">Real results from real businesses</p>
+    </div>
+    
+    <div class="case-studies-container">
+      <!-- Case Study 1: Restaurant -->
+      <div class="case-study-item">
+        <div class="case-study-wrapper">
+          <!-- Images Section -->
+          <div class="case-study-images-section">
+            <div class="images-comparison">
+              <div class="image-container before-image">
+                <img src="Images/restaurant2.jpg" alt="Restaurant website before redesign" />
+                <span class="image-label">Before</span>
+              </div>
+              <div class="image-container after-image">
+                <img src="Images/restaurant1.jpg" alt="Restaurant website after redesign" />
+                <span class="image-label">After</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Content Section -->
+          <div class="case-study-content-section">
+            <div class="case-study-header-info">
+              <h3>Restaurant Website Transformation</h3>
+              <p class="industry-tag">Hospitality</p>
+            </div>
+            
+            <!-- Challenge -->
+            <div class="case-study-block challenge-block">
+              <div class="block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4v2m0 4v2M7 15h10M7 11h10M7 7h10M3 5h18a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>The Challenge</h4>
+                <p>Poor mobile UX, slow loading times (8+ seconds), and no online ordering resulted in lost customers and revenue.</p>
+              </div>
+            </div>
+            
+            <!-- Solution -->
+            <div class="case-study-block solution-block">
+              <div class="block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Our Solution</h4>
+                <p>Mobile-first redesign with performance optimization (2.1s load time) and integrated online ordering system.</p>
+              </div>
+            </div>
+            
+            <!-- Results Metrics -->
+            <div class="case-study-metrics">
+              <div class="metric-card">
+                <span class="metric-value">300%</span>
+                <p class="metric-label">Mobile Orders</p>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">45%</span>
+                <p class="metric-label">Faster Load</p>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">$12K</span>
+                <p class="metric-label">Monthly Revenue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 2: Real Estate -->
+      <div class="case-study-item">
+        <div class="case-study-wrapper">
+          <!-- Images Section -->
+          <div class="case-study-images-section">
+            <div class="images-comparison">
+              <div class="image-container before-image">
+                <img src="Images/Desarrolla una web impactante de forma profesional.jpg" alt="Real estate website before redesign" />
+                <span class="image-label">Before</span>
+              </div>
+              <div class="image-container after-image">
+                <img src="Images/Desarrolla una web impactante de forma profesional.jpg" alt="Real estate website after redesign" />
+                <span class="image-label">After</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Content Section -->
+          <div class="case-study-content-section">
+            <div class="case-study-header-info">
+              <h3>Real Estate Lead Generation</h3>
+              <p class="industry-tag">Real Estate</p>
+            </div>
+            
+            <!-- Challenge -->
+            <div class="case-study-block challenge-block">
+              <div class="block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4v2m0 4v2M7 15h10M7 11h10M7 7h10M3 5h18a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>The Challenge</h4>
+                <p>Missing lead capture forms, confusing navigation, and weak SEO meant losing potential property inquiries.</p>
+              </div>
+            </div>
+            
+            <!-- Solution -->
+            <div class="case-study-block solution-block">
+              <div class="block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Our Solution</h4>
+                <p>Strategic redesign with clear CTAs, multiple lead forms, improved structure, and comprehensive local SEO optimization.</p>
+              </div>
+            </div>
+            
+            <!-- Results Metrics -->
+            <div class="case-study-metrics">
+              <div class="metric-card">
+                <span class="metric-value">250%</span>
+                <p class="metric-label">Qualified Leads</p>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">180%</span>
+                <p class="metric-label">SEO Rankings</p>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">40%</span>
+                <p class="metric-label">More Showings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 3: Logistics -->
+      <div class="case-study-item">
+        <div class="case-study-wrapper">
+          <!-- Images Section -->
+          <div class="case-study-images-section">
+            <div class="images-comparison">
+              <div class="image-container before-image">
+                <img src="Images/logistics 1.jpg" alt="Logistics website before redesign" />
+                <span class="image-label">Before</span>
+              </div>
+              <div class="image-container after-image">
+                <img src="Images/logistics 2.jpg" alt="Logistics website after redesign" />
+                <span class="image-label">After</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Content Section -->
+          <div class="case-study-content-section">
+            <div class="case-study-header-info">
+              <h3>Logistics Company Conversion Boost</h3>
+              <p class="industry-tag">Logistics</p>
+            </div>
+            
+            <!-- Challenge -->
+            <div class="case-study-block challenge-block">
+              <div class="block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4v2m0 4v2M7 15h10M7 11h10M7 7h10M3 5h18a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>The Challenge</h4>
+                <p>Outdated design, poor mobile responsiveness, and missing trust signals resulted in low conversion rates.</p>
+              </div>
+            </div>
+            
+            <!-- Solution -->
+            <div class="case-study-block solution-block">
+              <div class="block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Our Solution</h4>
+                <p>Modern, conversion-focused redesign with mobile optimization, trust badges, improved speed, and strategic CTA placement.</p>
+              </div>
+            </div>
+            
+            <!-- Results Metrics -->
+            <div class="case-study-metrics">
+              <div class="metric-card">
+                <span class="metric-value">65%</span>
+                <p class="metric-label">Quote Requests</p>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">50%</span>
+                <p class="metric-label">Bounce Rate Cut</p>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">35%</span>
+                <p class="metric-label">Conversions Up</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY HIRE ME -->
+  <section id="why-hire" class="section section-dark" data-aos="fade-up">
+    <h2>Why Hire Me</h2>
+    <p class="section-sub">What sets me apart from other developers</p>
+    <div class="card-grid">
+      <div class="differentiator-card">
+        <div class="differentiator-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          </svg>
+        </div>
+        <h3>Conversion-Focused Redesigns</h3>
+        <p>I don't just make websites look pretty—I make them convert. Every design decision is backed by conversion psychology and data-driven insights.</p>
+      </div>
+      <div class="differentiator-card">
+        <div class="differentiator-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+        </div>
+        <h3>Performance + SEO Optimization</h3>
+        <p>Fast-loading websites that rank higher in search results. I optimize every aspect from code to content strategy.</p>
+      </div>
+      <div class="differentiator-card">
+        <div class="differentiator-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Website Audits & UX Issue Detection</h3>
+        <p>Comprehensive website audits that identify hidden conversion killers and UX problems before they cost you customers.</p>
+      </div>
+      <div class="differentiator-card">
+        <div class="differentiator-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </div>
+        <h3>Business-Focused Solutions</h3>
+        <p>I speak your language. No tech jargon—just clear communication and solutions that drive real business results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section" data-aos="zoom-in-up">
+    <h2>Client Success Stories</h2>
+    <p class="section-sub text-center">What business owners say about working with me</p>
+    <div class="testimonial-slider">
+      <div class="testimonial-card active">
+        <div class="testimonial-content">
+          <p class="quote">"Kingsley transformed our restaurant website from a basic online presence to a lead-generating machine. Our online orders increased by 300% in the first month alone. The mobile experience is now flawless and our customers love it."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Owner, Bella Vista Restaurant</p>
+            </div>
+            <div class="author-rating">
+              <span class="stars">★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p class="quote">"The website audit Kingsley provided was eye-opening. He identified issues we never knew existed and the redesign completely changed our business. We're now getting 3x more qualified leads from our website."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>CEO, Prime Realty Group</p>
+            </div>
+            <div class="author-rating">
+              <span class="stars">★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p class="quote">"Working with Kingsley was a game-changer for our logistics company. Our new website loads faster, looks professional, and most importantly, converts visitors into customers. The ROI has been incredible."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>David Rodriguez</h4>
+              <p>Operations Manager, Swift Logistics</p>
+            </div>
+            <div class="author-rating">
+              <span class="stars">★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <button class="testimonial-prev">&larr;</button>
+      <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="testimonial-next">&rarr;</button>
+    </div>
+  </section>
+
+  <!-- FREE WEBSITE AUDIT
+  <section id="audit" class="section section-dark" data-aos="fade-up">
+    <div class="audit-container">
+      <div class="audit-content">
+        <h2>Get Your Free Website Audit</h2>
+        <p class="section-sub">Discover what's holding your website back from converting more visitors into customers</p>
+        <div class="audit-benefits">
+          <div class="benefit-item">
+            <span class="benefit-check">✓</span>
+            <span>Complete UX analysis and conversion audit</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-check">✓</span>
+            <span>Performance and speed optimization report</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-check">✓</span>
+            <span>SEO and mobile responsiveness check</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-check">✓</span>
+            <span>Actionable recommendations with priority levels</span>
+          </div>
+        </div>
+      </div>
+      <div class="audit-form">
+        <form id="audit-form">
+          <div class="form-group">
+            <label for="audit-name">Name *</label>
+            <input type="text" id="audit-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="audit-email">Email *</label>
+            <input type="email" id="audit-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="audit-website">Website URL *</label>
+            <input type="url" id="audit-website" name="website" placeholder="https://yourwebsite.com" required>
+          </div>
+          <button type="submit" class="btn btn-red btn-full">Get My Free Audit Report</button>
+          <p class="form-disclaimer">No spam, ever. Unsubscribe at any time.</p>
+        </form>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- PRICING -->
+  <section id="pricing" class="section section-black" data-aos="zoom-in-up">
+    <h1 class="section-title section-title-center">Web Design Pricing</h1>
+    <h2>Choose Your Package</h2>
+    <p class="section-sub">Transparent pricing with no hidden fees <br> Subscribe to my monthly Support on your website</p>
+    <div class="currency-toggle">
+      <label for="currency">Choose Currency:</label>
+      <select id="currency" onchange="toggleCurrency(this.value)">
+        <option value="usd">USD ($)</option>
+        <option value="gbp">GBP (£)</option>
+        <option value="eur">EUR (€)</option>
+      </select>
+    </div>
+    <div class="card-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Basic</h3>
+          <p class="pricing-subtitle">Perfect for startups</p>
+        </div>
+        <p class="price" data-usd="$350" data-gbp="£250" data-eur="€300">$350</p>
+        <ul>
+          <li>1-3 Pages</li>
+          <li>Mobile Responsive</li>
+          <li>Contact Form</li>
+          <li>Basic SEO Setup</li>
+          <li>Delivery: 5 Days</li>
+        </ul>
+        <a href="https://wa.link/nlndc7" target="_blank" rel="noreferrer" class="btn btn-red">Get Started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <h3>Standard</h3>
+          <p class="pricing-subtitle">Most popular choice</p>
+        </div>
+        <p class="price" data-usd="$700" data-gbp="£500" data-eur="€600">$700</p>
+        <ul>
+          <li>Up to 6 Pages</li>
+          <li>Animations & SEO</li>
+          <li>Live Chat & Forms</li>
+          <li>Performance Optimization</li>
+          <li>Delivery: 10 Days</li>
+        </ul>
+        <a href="https://wa.link/nlndc7" target="_blank" rel="noreferrer" class="btn btn-red">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Premium</h3>
+          <p class="pricing-subtitle">For serious businesses</p>
+        </div>
+        <p class="price" data-usd="$1400" data-gbp="£1000" data-eur="€1200">$1400</p>
+        <ul>
+          <li>Unlimited Pages</li>
+          <li>Full Custom Features</li>
+          <li>Admin Panel + Hosting</li>
+          <li>E-commerce Integration</li>
+          <li>Delivery: 10–15 Days</li>
+        </ul>
+        <a href="https://wa.link/nlndc7" target="_blank" rel="noreferrer" class="btn btn-red">Get Started</a>
+      </div>
+    </div>
+    <div class="pricing-footer">
+      <p class="pricing-note">All packages include 30 days of free support. Need something custom? <a href="#contact" class="red underline">Let's talk</a></p>
+    </div>
+  </section>
+
+  <!-- WEBSITE ISSUES -->
+  <section id="issues" class="section section-dark" data-aos="fade-up">
+    <h2>Website Issues I Commonly Fix</h2>
+    <p class="section-sub">Problems that are costing your business customers every day</p>
+    <div class="issues-grid">
+      <div class="issue-card">
+        <div class="issue-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+          </svg>
+        </div>
+        <h3>Weak Call-to-Actions</h3>
+        <p>Generic "Contact Us" buttons that don't compel visitors to take action, resulting in missed opportunities.</p>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3>Poor Mobile UX</h3>
+        <p>Sites that look terrible on phones, with tiny text, broken layouts, and frustrating navigation that drives users away.</p>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Slow Loading Times</h3>
+        <p>Pages that take 5+ seconds to load, causing 70% of visitors to abandon your site before it even loads.</p>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+          </svg>
+        </div>
+        <h3>Outdated Layouts</h3>
+        <p>Old-fashioned designs that look unprofessional and don't build trust with modern customers.</p>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+        </div>
+        <h3>Low-Converting Structure</h3>
+        <p>Websites that don't guide visitors toward your business goals, missing opportunities to capture leads or sales.</p>
+      </div>
+      <div class="issue-card">
+        <div class="issue-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <h3>Poor SEO Foundation</h3>
+        <p>Sites that aren't optimized for search engines, making it hard for potential customers to find your business online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section" data-aos="fade-right">
+    <h2>FAQs</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How long does a project take?</summary>
+        <p>Depending on the scope, most sites take 1–3 weeks from start to launch.</p>
+      </details>
+      <details>
+        <summary>What do I need to get started?</summary>
+        <p>I'll guide you through it — just have an idea, content, and your brand colors ready.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section section-black text-center" data-aos="fade-up">
+    <h2>Latest From My Blog</h2>
+    <p class="section-sub">Tips, tricks, and stories from my coding journey.</p>
+    <a href="#" class="red underline">Coming Soon →</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section text-center" data-aos="zoom-in">
+    <h2>Ready to Transform Your Website?</h2>
+    <p class="section-sub text-center">Let's discuss how I can help your business generate more leads and conversions</p>
+    <div class="contact-ctas">
+      <a href="#audit" class="btn btn-red">Get Free Website Audit</a>
+      <a href="https://wa.link/nlndc7" target="_blank" rel="noreferrer" class="btn btn-green">Start a Project</a>
+    </div>
+    <p class="contact-subtext">No pressure conversations • Clear pricing • Results-focused approach</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/webcraftkings?tab=repositories" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.404c1.02.005 2.047.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/kingsley-william-171301301" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.987V9h3.102v1.561h.044c.432-.818 1.487-1.681 3.061-1.681 3.274 0 3.878 2.155 3.878 4.958v6.614zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zM6.956 20.452H3.717V9h3.239v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://x.com/KingsleyWi9275" target="_blank" rel="noreferrer" aria-label="X">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <p>&copy; 2025 Kingsley William | All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
